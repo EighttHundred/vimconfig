@@ -14,7 +14,11 @@
     inoremap <c-u> <Esc>ui
     inoremap <c-r> <Esc><c-r>i
     nnoremap <leader>cpp :vsplit $CPPTEST<cr>
-
+    nnoremap <expr> <c-x> ExecFile()
+"Function
+    function! ExecFile()
+        execute "!" . expand('%:p')
+    endfunction 
 "Default Setting
     set incsearch
     set ignorecase
